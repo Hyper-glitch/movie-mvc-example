@@ -9,9 +9,10 @@ class View:
         self.model = Model()
 
     def show_all(self):
-        movies = self.model.get_all_movies()
+        movies = self.model.load()
         for movie in movies:
             print(movie)
 
     def add_movie(self, movie_obj):
         self.controller.add_movie(movie_obj)
+        
